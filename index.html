@@ -8,8 +8,9 @@
 	<head>
 		<title>dual solutions</title>
 		<meta charset="utf-8" />
+		<meta name="color-scheme" content="dark light">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/dark.css" id="theme-link"/>
 		<link rel="icon" type="image/x-icon" href="images/dualulogo.svg">
 	</head>
 	<body class="is-preload">
@@ -24,13 +25,13 @@
 							<!-- Header -->
 								<header id="header">
 									<a href="index.html" class="logo"><strong>dual solutions</strong></a>
-									<!-- <ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<<ul class="icons">
+										<li><input id="light-toggle" type="image" src="images/circle-half-stroke-solid-light.svg" onclick="toggleDark()" style="width:1.5em; height:1.5em;"/></li>
+										<!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
 										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
-									</ul> -->
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li> -->
+									</ul>
 								</header>
 
 							<!-- Banner -->
@@ -38,7 +39,7 @@
 									<div class="content">
 										<header>
 										    <span style="display:flex;">
-										        <img src="images/dualsollogo.svg" alt="dual solutions" style="width:100%;"/>
+										        <img id="logo" src="images/dualsollogo-light.svg" alt="dual solutions" style="width:100%;"/>
 										    </span>
 											<!-- <h1>dual solutions</h1> -->
 											<p>a collaborative optimization project</p>
@@ -262,4 +263,22 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+	
+	<script>
+        function toggleDark() {
+            const theme = document.querySelector("#theme-link");
+            const logo = document.querySelector("#logo");
+            const toggler = document.querySelector("#light-toggle");
+            
+            if (theme.getAttribute("href") == "assets/css/light.css") {
+              theme.href = "assets/css/dark.css";
+              logo.src = "images/dualsollogo-light.svg";
+              toggler.src = "images/circle-half-stroke-solid-light.svg";
+            } else {
+              theme.href = "assets/css/light.css";
+              logo.src = "images/dualsollogo.svg";
+              toggler.src = "images/circle-half-stroke-solid.svg";
+            }
+        }
+    </script>
 </html>
