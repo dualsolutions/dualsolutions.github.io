@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>dual solutions</title>
+		<title>blog</title>
 		<meta charset="utf-8" />
 		<meta name="color-scheme" content="dark light">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -34,79 +34,12 @@
 									</ul>
 								</header>
 
-							<!-- Banner -->
-								<section id="banner">
-									<div class="content">
-										<header>
-										    <span style="display:flex;">
-										        <img id="logo" src="images/dualsollogo-light.svg" alt="dual solutions" style="width:100%;"/>
-										    </span>
-											<!-- <h1>dual solutions</h1> -->
-											<p>a collaborative optimization project</p>
-										</header>
-										<p> Dual solutions is the collaboration of Nikhil Devanathan and Logan Bell, two engineering masters students
-										at Stanford University. It's a place for us to share the things we work on together, whether it's papers, code, or contracts. Our
-										focus is convex optimization, but our experience and interests span optimization, numerical methods, and statistics.</p>
-										<ul class="actions">
-											<li><a href="about-us.html" class="button big">Learn More</a></li>
-										</ul>
-									</div>
-									<span class="image object">
-										<img src="images/pic10.jpg" alt="" />
-									</span>
-								</section>
-
-							<!-- Section -->
+							<!-- Content -->
 								<section>
-									<header class="major">
-										<h2>what we do</h2>
+									<header class="main">
+										<h1>blog</h1>
 									</header>
-									<div class="features">
-										<article>
-											<span class="icon solid fa-pen-alt"></span>
-											<div class="content">
-												<h3>blogging</h3>
-												<p>Today there are more resources than ever before that explain topics in optimization and statistics well, but many are intended 
-												for more experienced readers and can be dificult to use as an introduction to the subject. Our
-												blogging for dual solutions gives us the opportunity to record things we initially missed or found difficult to understand in the 
-												hopes that some future learners may use this resource to better understand these subjects. </p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-code"></span>
-											<div class="content">
-												<h3>open source code</h3>
-												<p>Both of us have a firm belief in open source code. We have ourselves experienced the struggle of implementing software that
-												solves optimization problems, only to be limited by proprietary code, or set back by the instability of certain open source tools.
-												Through dual solutions, we hope to do our part to improve the open source ecosystem of numerical tools.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-file-alt"></span>
-											<div class="content">
-												<h3>papers</h3>
-												<p>Just as we believe code should be shared as freely as possible, we belive that knowledge, especially academic knowledge should
-												also be shared. We share any companion papers to our code or relevant papers we otherwise write together here so that others can see,
-												learn from, and improve on what we do.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-toolbox"></span>
-											<div class="content">
-												<h3>contracts</h3>
-												<p>Contracts are our way to more directly help individuals and organizations with relevant technical challenges they may face. Under 
-												dual solutions, we offer technical consulting services on a contractual basis relating to statistics and optimization. If you have any
-												questions about the services we offer or the problems we may be able to help solve, please contact us!</p>
-											</div>
-										</article>
-									</div>
-								</section>
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>recent activity</h2>
-									</header>
 									<div class="posts">
 										<article>
 											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
@@ -157,6 +90,7 @@
 											</ul>
 										</article>
 									</div>
+
 								</section>
 
 						</div>
@@ -253,16 +187,13 @@
 	<script>
         function toggleDark() {
             const theme = document.querySelector("#theme-link");
-            const logo = document.querySelector("#logo");
             const toggler = document.querySelector("#light-toggle");
             
             if (theme.getAttribute("href") == "assets/css/light.css") {
               theme.href = "assets/css/dark.css";
-              logo.src = "images/dualsollogo-light.svg";
               toggler.src = "images/circle-half-stroke-solid-light.svg";
             } else {
               theme.href = "assets/css/light.css";
-              logo.src = "images/dualsollogo.svg";
               toggler.src = "images/circle-half-stroke-solid.svg";
             }
         }
