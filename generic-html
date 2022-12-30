@@ -14,35 +14,7 @@
 		<link rel="icon" type="image/x-icon" href="images/dualulogo.svg">
 	</head>
 	<body class="is-preload">
-		<script>
-			const prefersLightScheme = window.matchMedia("(prefers-color-scheme: light)");
-			
-			function getCookie(name) {
-			  let matches = document.cookie.match(new RegExp(
-				"(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-			  ));
-			  return matches ? decodeURIComponent(matches[1]) : null;
-			}
-			
-			lightVal = getCookie("lightMode");
-			lightMode = false;
-			
-			if (lightVal !== null) {
-				lightMode = (lightVal == "true");
-				document.cookie = "debug2="+prefersLightScheme.matches;
-				
-				if (lightMode && !prefersLightScheme.matches) {
-					document.body.classList.toggle("light-theme");
-				} else if (!lightMode && prefersLightScheme.matches) {
-					document.body.classList.toggle("dark-theme");
-				
-				}
-			} else if (prefersLightScheme.matches) {
-				lightMode = true;
-			}
-			
-			document.cookie = "lightMode="+lightMode;
-		</script>
+		<script src="assets/js/load.theme.js"></script>
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -52,7 +24,10 @@
 						<div class="inner">
 
 							<!-- Header -->
-								<header id="header">
+								<!--#include file="header.html" -->
+							<!-- Content -->
+								<section>
+									<header id="header">
 									<a href="index.html" class="logo"><strong>dual solutions</strong></a>
 									<ul class="icons">
 										<li><input id="light-toggle" class="switch-graphic" type="image" src="images/circle-half-stroke-solid.svg" onclick="toggleDark()" style="width:1.5em; height:1.5em;"/></li>
@@ -62,12 +37,6 @@
 										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li> -->
 									</ul>
 								</header>
-
-							<!-- Content -->
-								<section>
-									<header class="main">
-										<h1>Generic</h1>
-									</header>
 
 									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
 
@@ -183,23 +152,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/switch.theme.js"></script>
 
 	</body>
-	
-	<script>
-        function toggleDark() {
-		    const prefersLightScheme = window.matchMedia("(prefers-color-scheme: light)");
-			
-			lightVal = getCookie("lightMode");
-			lightMode = (lightVal != "true");
-            
-            if (prefersLightScheme.matches) {
-				document.body.classList.toggle("dark-theme");
-			} else {
-				document.body.classList.toggle("light-theme");
-			}
-			
-			document.cookie = "lightMode="+lightMode;
-        }
-    </script>
 </html>
