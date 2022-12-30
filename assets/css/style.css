@@ -11,7 +11,7 @@
   -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
           filter: invert(100%);
 }
-.switch-graphic.light-theme {
+.light-theme .switch-graphic {
   -webkit-filter: invert(0%); /* safari 6.0 - 9.0 */
           filter: invert(0%);
 }
@@ -54,7 +54,7 @@ body.light-theme {
     -webkit-filter: invert(0%); /* safari 6.0 - 9.0 */
           filter: invert(0%);
   }
-  .switch-graphic.dark-theme {
+  .dark-theme .switch-graphic {
     -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
           filter: invert(100%);
   }
